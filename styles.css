@@ -26,7 +26,7 @@ a { text-decoration: none; color: inherit; }
 .tag { color: var(--primary); font-weight: 700; text-transform: uppercase; font-size: 13px; letter-spacing: .08em; margin-bottom: 14px; }
 h1 { font-size: clamp(38px, 6vw, 64px); line-height: 1.05; letter-spacing: -1.5px; margin-bottom: 22px; }
 .subtitle { font-size: 20px; color: var(--muted); max-width: 720px; margin-bottom: 32px; }
-.hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
 .btn-primary, .btn-secondary { display: inline-block; padding: 14px 20px; border-radius: 12px; font-weight: 700; }
 .btn-primary { background: var(--primary); color: white; box-shadow: 0 12px 30px rgba(37,99,235,.25); }
 .btn-primary:hover { background: var(--primary-dark); }
@@ -64,16 +64,52 @@ h1 { font-size: clamp(38px, 6vw, 64px); line-height: 1.05; letter-spacing: -1.5p
   .nav { align-items: flex-start; gap: 14px; flex-direction: column; }
   .nav-links { flex-wrap: wrap; gap: 14px; }
   .hero { padding-top: 54px; }
-}
-.contact-box .hero-buttons {
-  justify-content: center;
-  align-items: center;
-  margin-top: 28px;
+  .contact-box .hero-buttons {
+    flex-direction: column;
 }
 
-.contact-box .btn-primary,
-.contact-box .btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.contact-box .hero-buttons a {
+    width: 100%;
+    max-width: 320px;
 }
+}
+.contact-box .hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.contact-box .hero-buttons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 240px;
+    min-height: 52px;
+}
+.btn-whatsapp {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 14px 20px;
+    min-width: 240px;
+    min-height: 52px;
+
+    background: #25D366;
+    color: white;
+
+    border-radius: 12px;
+    font-weight: 700;
+
+    transition: all .25s ease;
+    box-shadow: 0 12px 30px rgba(37, 211, 102, .25);
+}
+
+.btn-whatsapp:hover {
+    background: #1EBE5D;
+    transform: translateY(-2px);
+}
+
